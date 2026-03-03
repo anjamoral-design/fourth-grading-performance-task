@@ -3,30 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Random Story Generator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="container">
     <h2>Random Story Generator</h2>
-    <!-- This is where the story will appear -->
-    <div id="story">Click the button to see a story!</div>
-    
-    <!-- Button to trigger the JavaScript function -->
+
+    <!-- Story Title -->
+    <div id="title">Click the button to see a story!</div>
+
+    <!-- Story Content -->
+    <div id="story"></div>
+
     <button onclick="generateStory()">Generate Story</button>
   </div>
 
-  <script>
-    const stories = [
-      "🌧️ Walking alone, then 🌈 finding hope",
-      "📚 Studying hard → 🎓 achieving dreams",
-      "🌙 Thinking deeply → ✨ discovering ideas",
-      "🚶 Small steps → 🏆 big success"
-    ];
-
-    function generateStory() {
-      const storyElement = document.getElementById("story");
-      storyElement.innerHTML =
-        stories[Math.floor(Math.random() * stories.length)];
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
