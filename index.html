@@ -1,27 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Temperature Converter</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Random Story Generator</title>
 </head>
 <body>
+  <div class="container">
+    <h2>Random Story Generator</h2>
+    <!-- This is where the story will appear -->
+    <div id="story">Click the button to see a story!</div>
+    
+    <!-- Button to trigger the JavaScript function -->
+    <button onclick="generateStory()">Generate Story</button>
+  </div>
 
-<div class="container">
-    <h2>Temperature Converter</h2>
+  <script>
+    const stories = [
+      "🌧️ Walking alone, then 🌈 finding hope",
+      "📚 Studying hard → 🎓 achieving dreams",
+      "🌙 Thinking deeply → ✨ discovering ideas",
+      "🚶 Small steps → 🏆 big success"
+    ];
 
-    <input type="number" id="temperature" placeholder="Enter temperature">
-
-    <select id="unit">
-        <option value="celsius">Celsius</option>
-        <option value="fahrenheit">Fahrenheit</option>
-        <option value="kelvin">Kelvin</option>
-    </select>
-
-    <button onclick="convertTemperature()">Convert</button>
-
-    <p id="result"></p>
-</div>
-
-<script src="script.js"></script>
+    function generateStory() {
+      const storyElement = document.getElementById("story");
+      storyElement.innerHTML =
+        stories[Math.floor(Math.random() * stories.length)];
+    }
+  </script>
 </body>
 </html>
