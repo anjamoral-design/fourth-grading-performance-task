@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Random Story Generator</title>
-  <link rel="stylesheet" href="style.css">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="container">
-    <h2>Random Story Generator</h2>
 
-    <!-- Story Title -->
-    <div id="title">Click the button to see a story!</div>
+    <div class="container">
+        <h1>BMI Calculator</h1>
 
-    <!-- Story Content -->
-    <div id="story"></div>
+        <input type="number" id="weight" placeholder="Enter weight (kg)">
+        <input type="number" id="height" placeholder="Enter height (meters)">
 
-    <button onclick="generateStory()">Generate Story</button>
-  </div>
+        <button onclick="calculateBMI()">Calculate BMI</button>
 
-  <script src="script.js"></script>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
